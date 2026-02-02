@@ -10,7 +10,7 @@ import (
 var DateBuild string
 
 func main() {
-	versionFlag := flag.Bool("version", false, "Print the version number")
+	versionFlag := flag.Bool("version", false, "Print the version number, date build and Go version")
 	flag.Parse()
 	if *versionFlag {
 		if info, ok := debug.ReadBuildInfo(); ok && info != nil {
