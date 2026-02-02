@@ -1,0 +1,28 @@
+version: "3"
+
+tasks:
+  build:
+    cmds:
+      - go build -o test_project
+
+  run:
+    cmds:
+      - go run ./cmd/app
+
+  fmt:
+    cmds:
+      - go fmt ./...
+
+  vet:
+    cmds:
+      - go vet ./...
+
+  test:
+    cmds:
+      - go test ./...
+
+  check:
+    deps:
+      - fmt
+      - vet
+      - test
